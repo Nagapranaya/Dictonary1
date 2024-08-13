@@ -14,6 +14,8 @@
 		A65E5AB02C6B470200C24186 /* Dictonary1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A65E5AAE2C6B470200C24186 /* Dictonary1.xcdatamodeld */; };
 		A65E5AB22C6B470700C24186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E5AB12C6B470700C24186 /* Assets.xcassets */; };
 		A65E5AB52C6B470700C24186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65E5AB32C6B470700C24186 /* LaunchScreen.storyboard */; };
+		A65E5ABD2C6B4B2200C24186 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E5ABC2C6B4B2200C24186 /* TableViewCell.swift */; };
+		A65E5ABF2C6B4C2900C24186 /* DictonaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E5ABE2C6B4C2900C24186 /* DictonaryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A65E5AB12C6B470700C24186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65E5AB42C6B470700C24186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A65E5AB62C6B470700C24186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E5ABC2C6B4B2200C24186 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A65E5ABE2C6B4C2900C24186 /* DictonaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictonaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				A65E5AA52C6B470200C24186 /* AppDelegate.swift */,
 				A65E5AA72C6B470200C24186 /* SceneDelegate.swift */,
 				A65E5AA92C6B470200C24186 /* ViewController.swift */,
+				A65E5ABE2C6B4C2900C24186 /* DictonaryModel.swift */,
+				A65E5ABC2C6B4B2200C24186 /* TableViewCell.swift */,
 				A65E5AAB2C6B470200C24186 /* Main.storyboard */,
 				A65E5AB12C6B470700C24186 /* Assets.xcassets */,
 				A65E5AB32C6B470700C24186 /* LaunchScreen.storyboard */,
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65E5ABD2C6B4B2200C24186 /* TableViewCell.swift in Sources */,
 				A65E5AAA2C6B470200C24186 /* ViewController.swift in Sources */,
 				A65E5AB02C6B470200C24186 /* Dictonary1.xcdatamodeld in Sources */,
 				A65E5AA62C6B470200C24186 /* AppDelegate.swift in Sources */,
 				A65E5AA82C6B470200C24186 /* SceneDelegate.swift in Sources */,
+				A65E5ABF2C6B4C2900C24186 /* DictonaryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
