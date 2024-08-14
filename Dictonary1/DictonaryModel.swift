@@ -8,12 +8,12 @@
 import Foundation
 struct Dictonary: Codable{
     let word: String
-    let meaning: [Meaning]
+    let meanings: [Meaning]
 }
 struct Meaning: Codable{
-    let definations: [Definations]
+    let definitions: [Definations]
 }
 
 struct Definations: Codable{
-    let defination: String
+    let definition: String
 }
