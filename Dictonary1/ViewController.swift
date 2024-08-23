@@ -20,6 +20,16 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchCoreData { x in
+            print(x!)
+            if let words = x{
+                for w in words{
+                    print(w.meaning!)
+                    print(w.word!)
+                    self.words.append(w.word!)
+                }
+            }
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -34,6 +44,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
                 self.outputLabel.text = x.definition
                 self.words.append(self.wordTextField.text!)
                 self.wordMeaningsTable.reloadData()
+                addCoreData(word: self.wordTextField.text!, meaning: x.definition)
             }
             
         }, word: wordTextField.text!)
@@ -133,3 +144,25 @@ func fetchMeaning2(completionHandler: @escaping ([Dictonary])-> Void , word: Str
    
 }
 
+
+func addCoreData(word: String, meaning: String) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let words = Word(context: context)
+    words.word = word
+    words.meaning = meaning
+    do {
+        try context.save()
+    } catch {
+        print("error-Saving data")
+    }
+}
+
+func fetchCoreData(onSuccess: @escaping ([Word]?) -> Void) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    do {
+        let items = try context.fetch(Word.fetchRequest()) as? [Word]
+        onSuccess(items)
+    } catch {
+        print("error-Fetching data")
+    }
+}
